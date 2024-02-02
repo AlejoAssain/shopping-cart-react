@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100px;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 50px;
+  box-shadow: 0 2px 3px rgb(0,0,0,0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.bubble {
+  position: relative;
+  left: 12;
+  top: 20;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bubbleAlert {
+  background-color: #e9725a;
+  border-radius: "15px";
+  color: #fff;
+  padding: 2px 10px;
+  font-size: 0.9rem; 
+  width: 20px;
+}
+
+.cart {
+  background-color: #359a2c;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
+  border: solid 1px #eee;
+  box-shadow: 0 5px 5px rgb(0,0,0,0.1);
+  width: 30%;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.img {
+  width: 100%;
+}
+
+.button {
+  background-color: #0a283e;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.layout {
+  background-color: #fff;
+  color: #0a283e;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 1200px;
+}
+
+.cart-details {
+  background-color: #fff;
+  position: absolute;
+  margin-top: 30;
+  box-shadow: 1px 5px 5px rgb(0,0,0,0.1);
+  border-radius: 5px;
+  width: 300px;
+  right: 50;
+}
+
+.cart-item {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  border-bottom: solid 1px #aaa;
+}
+
+.cart-list {
+  margin: 0;
+  padding: 0;
 }

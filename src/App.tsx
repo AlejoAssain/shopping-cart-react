@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Items from "./components/Items"
+import Layout from "./components/Layout"
+import Title from "./components/Title"
+import Navbar from "./components/Navbar"
+import useCart from "./hooks/useCart";
 
-function App() {
+
+const ITEMS = [
+  { id: 1, name: "Tomato", price: 1500, img: "/items/tomato.jpg" },
+  { id: 2, name: "Beans", price: 2500, img: "/items/beans.jpg" },
+  { id: 3, name: "Lettuce", price: 500, img: "/items/lettuce.jpg" }
+]
+
+const App = () => {
+  const cartHook = useCart();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>  
+      <Navbar 
+        cart={cartHook.cart} 
+        changeCartVisibility={cartHook.changeCartVisibility} 
+        isCartVisible={cartHook.cart.isCartVisible}
+      />
+      <Layout>
+        <Title/>
+        <Items
+          addItemToCart={cartHook.addItemToCart}
+          items={ITEMS}
+        />
+      </Layout>
     </div>
-  );
+  )
 }
 
 export default App;
