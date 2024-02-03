@@ -17,12 +17,12 @@ const Cart = (props: Props) => {
   return (
     <div>
     <span className="bubble">
-        {totalCartAmount !== 0 ? (<BubbleAlert value={totalCartAmount}/>) : ""}
+      {totalCartAmount !== 0 ? (<BubbleAlert value={totalCartAmount}/>) : ""}
     </span>
     <button className="cart" onClick={changeCartVisibility}>
         Cart
     </button>
-        {isCartVisible ? (<CartDetails cart={cart}/>) : null }
+      {isCartVisible ? (<CartDetails cart={cart}/>) : null }
     </div>
   )
 }

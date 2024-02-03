@@ -13,7 +13,7 @@ const CartDetails = (props: Props) => {
         {props.cart.items.map(x => (
           <li key={x.name} className="cart-item">
             <img alt={x.name} src={x.img} width="50" height="32"></img>
-            {x.name} <span>{x.amount}</span>
+            {x.name}<span>{x.amount}</span>
           </li>
         ))}
       </ul>

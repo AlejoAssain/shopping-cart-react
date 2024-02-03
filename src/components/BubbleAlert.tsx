@@ -1,18 +1,3 @@
-import {Component} from "react";
-
-
-// ready in css
-// const styles = {
-//     bubbleAlert: {
-//         backgroundColor: "#e9725a",
-//         borderRadius: "15px",
-//         color: "#fff",
-//         padding: "2px 10px",
-//         fontSize: "0.9rem", 
-//         width: "20px",
-//     }
-// }
-
 type Props = {
   value: number;
 }
